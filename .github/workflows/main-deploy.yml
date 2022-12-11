@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
 
@@ -16,11 +16,10 @@ jobs:
         with:
           node-version: "12.x"
 
-      - run: yarn install --immutable --immutable-cache --check-cache 
+      - run: yarn install
       - run: yarn run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: $
           publish_dir: ./build
