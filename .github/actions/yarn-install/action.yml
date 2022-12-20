@@ -1,4 +1,4 @@
-name: 'Yarn install'
+name: 'Package install'
 description: 'Run yarn install'
 
 runs:
