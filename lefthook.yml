@@ -1,0 +1,6 @@
+pre-commit:
+  commands:
+    es-linter:
+      run: yarn run lint
+    prettier:
+      run: yarn run format
